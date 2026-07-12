@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherPulse - Weather Forecast</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="weather-container">
+        <header class="search-box">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="text" id="city-input" placeholder="Enter city name (e.g., Gurgaon)..." autocomplete="off">
+            <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </header>
+
+        <div class="error-msg" id="error-msg">City not found. Please try again!</div>
+
+        <main class="weather-box" id="weather-box">
+            <div class="location-date">
+                <h2 id="location">Gurgaon, IN</h2>
+                <p id="date">Monday, July 13</p>
+            </div>
+
+            <div class="current-weather">
+                <img id="weather-icon" src="https://openweathermap.org/img/wn/01d@2x.png" alt="Weather Icon">
+                <div class="temperature">
+                    <span id="temp-value">32</span><span class="unit">°C</span>
+                </div>
+                <p id="weather-desc">Clear Sky</p>
+            </div>
+
+            <section class="weather-details">
+                <div class="humidity">
+                    <i class="fa-solid fa-droplet"></i>
+                    <div class="text">
+                        <span id="humidity-val">65%</span>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="wind">
+                    <i class="fa-solid fa-wind"></i>
+                    <div class="text">
+                        <span id="wind-val">12 km/h</span>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <section class="forecast-container" id="forecast-container">
+            <h3>5-Day Forecast</h3>
+            <div class="forecast-cards" id="forecast-cards">
+                <div class="forecast-card">
+                    <p class="day">Tue</p>
+                    <img src="https://openweathermap.org/img/wn/10d.png" alt="">
+                    <p class="forecast-temp">30°C</p>
+                </div>
+                <div class="forecast-card">
+                    <p class="day">Wed</p>
+                    <img src="https://openweathermap.org/img/wn/02d.png" alt="">
+                    <p class="forecast-temp">31°C</p>
+                </div>
+                <div class="forecast-card">
+                    <p class="day">Thu</p>
+                    <img src="https://openweathermap.org/img/wn/04d.png" alt="">
+                    <p class="forecast-temp">29°C</p>
+                </div>
+                <div class="forecast-card">
+                    <p class="day">Fri</p>
+                    <img src="https://openweathermap.org/img/wn/09d.png" alt="">
+                    <p class="forecast-temp">28°C</p>
+                </div>
+                <div class="forecast-card">
+                    <p class="day">Sat</p>
+                    <img src="https://openweathermap.org/img/wn/01d.png" alt="">
+                    <p class="forecast-temp">33°C</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
